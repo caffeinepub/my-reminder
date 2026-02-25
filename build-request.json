@@ -1,0 +1,145 @@
+{
+  "kind": "build_request",
+  "title": "MY REMINDER – GPS Destination Reminder App (Multi-Screen Mobile UI)",
+  "projectName": "My Reminder",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement a Home Screen as the default landing view. It must display the app logo (generated icon), the title 'MY REMINDER' in large bold typography, a short tagline, and a prominent 'Set Destination' button styled with a golden/yellow fill on a dark background. The screen should use a dark cinematic black background (#0A0A0A / #111111) with yellow/golden accent color (#F5C518 or similar). Use rounded cards and Material Design–inspired layout suitable for mobile viewports.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Home screen with app logo, title, and 'Set Destination' button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home screen renders with a dark background and displays the app logo image",
+        "Title 'MY REMINDER' is prominently displayed in bold golden/yellow typography",
+        "A 'Set Destination' button is visible and navigates to the Destination Input screen on click",
+        "Overall layout is clean, minimal, and uses rounded card styling"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a Destination Input Screen accessible from the Home Screen. It must include: (1) a styled search bar with a location pin icon and placeholder text 'Search destination…', (2) a map preview area rendered as a static visual placeholder card (no real GPS/map API) showing a stylized dark map tile with a golden marker pin, and (3) a 'Next' or 'Set Alert' button at the bottom to proceed to the Alert Settings screen. Maintain dark background and golden accent styling consistent with the Home Screen.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Destination input screen with a search bar and map preview"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Destination Input screen is reachable from the Home screen's 'Set Destination' button",
+        "A search bar with icon is displayed at the top of the screen",
+        "A map preview card occupies the main content area with a visual placeholder showing a pin/marker",
+        "A navigation button proceeds to the Alert Settings screen",
+        "Styling follows dark cinematic black background with yellow/golden highlights"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement an Alert Settings Screen accessible from the Destination Input Screen. It must include: (1) a section titled 'Remind Me Before Arrival' with three selectable option chips/buttons for '1 min', '2 min', and '5 min' — only one can be active at a time, highlighted in golden yellow when selected; (2) a sound toggle switch labeled 'Sound Alert' styled with a golden active state; (3) a 'Save Reminder' button as the primary CTA at the bottom; and (4) a back navigation option. All state (selected time option, sound toggle) is managed locally in React state.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Alert settings screen with options like 1 min, 2 min, 5 min before arrival, sound toggle, and save button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Alert Settings screen is reachable from the Destination Input screen",
+        "Three time option chips (1 min, 2 min, 5 min) are displayed; only the selected one is highlighted in golden yellow",
+        "A sound toggle switch is displayed with an on/off state and golden active styling",
+        "A 'Save Reminder' button is present at the bottom of the screen",
+        "Clicking 'Save Reminder' shows a confirmation toast/snackbar and returns the user to the Home screen",
+        "Styling is consistent with the dark cinematic black + golden accent design system"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a multi-screen navigation system (using React state or a simple router) connecting the three screens: Home → Destination Input → Alert Settings → (on save) Home. Include a top navigation bar on the Destination Input and Alert Settings screens with a back arrow icon and the current screen title in golden text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "multi-screen mobile app UI design"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation flows correctly: Home → Destination Input → Alert Settings → Home",
+        "Back navigation is available on Destination Input and Alert Settings screens",
+        "Top bar displays screen title with golden styling on non-home screens"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Apply a consistent dark cinematic design system across all screens: background color #0A0A0A or #111111, primary accent color golden yellow (#F5C518 or #FFD700), all interactive cards and containers use rounded corners (border-radius ~16px), typography is modern sans-serif (e.g., Inter or system-ui) with varying weights, minimal iconography using outline-style icons, and the overall aesthetic targets young adult users with a professional and intuitive feel inspired by Android Material Design 3.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "dark cinematic black background with yellow/golden highlights, minimal icons, rounded cards, and modern Android Material Design style. Make it professional, simple, and intuitive for young users"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All screens use a near-black background (#0A0A0A–#111111 range)",
+        "Golden/yellow (#F5C518 or similar) is used consistently for headings, active states, buttons, and accents",
+        "All cards and containers have rounded corners (≥12px radius)",
+        "Typography is clean, modern, and legible at mobile-equivalent viewport widths",
+        "No blue or purple accent colors appear in the UI"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Render the app in a mobile-frame wrapper (max-width ~390px, centered on desktop) to simulate a smartphone display, with a subtle dark outer frame or shadow to reinforce the mobile app aesthetic.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "multi-screen mobile app UI design",
+          "modern Android Material Design style"
+        ]
+      },
+      "acceptanceCriteria": [
+        "App content is constrained to a mobile-width container (~375–390px) centered on wider screens",
+        "A visual frame or shadow around the mobile container is visible on desktop viewports",
+        "No horizontal overflow or layout breaks occur at mobile widths"
+      ]
+    }
+  ],
+  "constraints": [
+    "No real GPS or mapping API integrations — map preview must be a static visual placeholder",
+    "No backend persistence required; all reminder settings are managed in frontend React state only",
+    "Do not use blue or purple as accent colors",
+    "All user-facing text must be in English"
+  ],
+  "nonGoals": [
+    "Real-time GPS tracking or geofencing logic",
+    "Push notifications or system-level alerts",
+    "Backend data storage for reminders",
+    "User authentication or accounts",
+    "Map tile API integration (Google Maps, Mapbox, etc.)"
+  ],
+  "imageRequirements": {
+    "required": [
+      "App logo icon: a circular golden location pin / radar wave mark on a dark background, modern minimal style (my-reminder-logo.dim_256x256.png)",
+      "Stylized dark map preview placeholder: a top-down dark map tile with streets in dark gray, a glowing golden marker pin at center, cinematic look (map-preview-placeholder.dim_390x260.png)"
+    ],
+    "edits": []
+  }
+}

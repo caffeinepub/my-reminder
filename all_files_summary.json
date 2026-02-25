@@ -1,0 +1,19 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented logic.",
+  "feature_evidence.json": "Feature evidence report mapping three app features (Home Screen, Destination Input, Alert Settings) to their implementing files, components, and test IDs with high confidence.",
+  "frontend-file-summaries.txt": "JSON document containing one-line summaries of each frontend source file, describing their roles in the dark cinematic design system.",
+  "frontend/index.css": "Base Tailwind CSS file defining OKLCH-based CSS custom properties for light and dark color themes including backgrounds, borders, charts, and sidebar tokens.",
+  "frontend/index.html": "HTML entry point titled 'MY REMINDER' that mounts the React app into a root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component managing screen navigation (home/destination/alert), shared reminder state, and toast notifications, rendering all three screens inside a mobile frame wrapper.",
+  "frontend/src/components/AlertSettingsScreen.tsx": "Alert settings screen allowing users to select a pre-arrival reminder time (1/2/5 min), toggle sound, and save the reminder, with golden accent styling and a destination summary card.",
+  "frontend/src/components/DestinationInputScreen.tsx": "Destination input screen featuring a styled search bar, filtered suggested destinations list, and a static dark map preview with a golden marker pin, navigating to alert settings on proceed.",
+  "frontend/src/components/HomeScreen.tsx": "Home screen displaying the animated app logo, bold golden 'MY REMINDER' title, an active reminder summary card when set, and a prominent golden 'Set Destination' CTA button.",
+  "frontend/src/components/Toast.tsx": "A Toast notification component that displays a success message with a CheckCircle icon, styled with a dark golden-accented glassmorphism design and slide-in animation.",
+  "frontend/src/components/TopNavBar.tsx": "A top navigation bar component with a back button (ArrowLeft icon), a centered title, and an optional right-side element, styled with the app's dark/gold theme.",
+  "frontend/src/hooks/useActor.ts": "A React hook that creates and caches an ICP backend actor (authenticated or anonymous) using React Query, and invalidates dependent queries whenever the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider and useInternetIdentity hook for managing ICP Internet Identity authentication, including login, logout, and identity persistence via AuthClient.",
+  "frontend/src/index.css": "Global CSS file defining the dark cinematic theme with golden accents using OKLCH color tokens, Tailwind base/utilities, custom animations (slide, fade, toast), and mobile-frame layout utilities.",
+  "frontend/src/main.tsx": "Application entry point that renders the React app wrapped with QueryClientProvider and InternetIdentityProvider into the root DOM element.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom OKLCH-based color tokens (gold, surface, appbg), Inter font family, custom border radii, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state metadata describing the GPS-based destination reminder app 'MY REMINDER', including its dark/gold UI design system, implemented feature list, architectural notes, and image asset requirements."
+}

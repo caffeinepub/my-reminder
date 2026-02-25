@@ -1,0 +1,70 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T07:29:01.676Z",
+  "summary": "The diff implements all six requirements comprehensively. All three screens (Home, Destination Input, Alert Settings) are present with correct navigation, dark cinematic styling, golden accents, rounded corners, mobile frame wrapper, and toast notification. The map preview in DestinationInputScreen uses a static placeholder with a golden marker pin as required. Generated image assets are referenced but not included as binary files, which is expected. Overall implementation is very complete with some extra features added beyond the spec.",
+  "missing_requirements": [
+    {
+      "requirement": "Map preview placeholder image asset (map-preview-placeholder.dim_390x260.png) specified as a required generated image",
+      "reason": "The build request specifies a generated image 'map-preview-placeholder.dim_390x260.png' should be used as the map preview. The diff shows DestinationInputScreen implements the map preview as a CSS/code-based placeholder rather than using the specified generated image file, and the image file itself does not appear in the diff.",
+      "evidence": [
+        "frontend/src/components/DestinationInputScreen.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication infrastructure including useInternetIdentity hook, useActor hook, InternetIdentityProvider, and QueryClientProvider wrapping the entire app",
+      "reason": "The build request explicitly lists 'User authentication or accounts' as a non-goal and requires no backend persistence. The diff includes a full Internet Identity provider, auth client setup, actor hooks with react-query, and wraps the entire app in authentication providers — none of which were requested.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx",
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Vibration toggle row in Alert Settings screen",
+      "reason": "The file summary for AlertSettingsScreen.tsx mentions a vibration row in addition to the sound toggle. The build request only specified a Sound Alert toggle — no vibration control was requested.",
+      "evidence": [
+        "frontend/src/components/AlertSettingsScreen.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    },
+    {
+      "description": "Suggested destinations list with pre-populated destination options (Central Station, City Mall, Airport Terminal 1, University Campus) with distance labels",
+      "reason": "The build request only specifies a search bar with placeholder text and a map preview. A suggested destinations feature with hardcoded locations was not requested.",
+      "evidence": [
+        "frontend/src/components/DestinationInputScreen.tsx"
+      ]
+    },
+    {
+      "description": "Active reminder summary card on Home Screen showing previously saved reminder details",
+      "reason": "The build request specifies the Home Screen should display the logo, title, tagline, and Set Destination button. An additional conditional card displaying saved reminder state was not part of the specification.",
+      "evidence": [
+        "frontend/src/components/HomeScreen.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "confidence": 0.78,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/AlertSettingsScreen.tsx",
+    "frontend/src/components/DestinationInputScreen.tsx",
+    "frontend/src/components/HomeScreen.tsx",
+    "frontend/src/components/Toast.tsx",
+    "frontend/src/components/TopNavBar.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

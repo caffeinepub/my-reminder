@@ -1,0 +1,10 @@
+{
+  "frontend/src/index.css": "Global design system CSS with dark cinematic OKLCH color tokens, Inter font import, golden yellow accent variables, animation keyframes (fadeInUp, slideIn, toast), and mobile frame utility classes.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Inter font family, custom gold color palette (oklch-based), surface color scale, app background, enhanced border-radius and box-shadow tokens for the dark cinematic design system.",
+  "frontend/src/App.tsx": "Root app component managing multi-screen navigation state (home/destination/alert), reminder state, and toast notifications; renders the mobile frame wrapper centered on desktop with all three screens.",
+  "frontend/src/components/HomeScreen.tsx": "Home screen with animated logo, bold golden \"MY REMINDER\" title, active reminder card display, feature pills, and a prominent golden \"Set Destination\" CTA button with footer attribution.",
+  "frontend/src/components/TopNavBar.tsx": "Reusable top navigation bar component with a golden back arrow button and golden screen title, used on Destination Input and Alert Settings screens.",
+  "frontend/src/components/DestinationInputScreen.tsx": "Destination input screen with a focused search bar, suggested destinations list, and a stylized dark map preview with a golden marker pin and navigation to Alert Settings.",
+  "frontend/src/components/AlertSettingsScreen.tsx": "Alert settings screen with three selectable time chips (1/2/5 min), a custom sound toggle switch, vibration row, reminder summary pills, and a golden \"Save Reminder\" CTA button.",
+  "frontend/src/components/Toast.tsx": "Animated toast notification component with golden accent styling, check icon, and slide-in animation for save confirmation feedback."
+}

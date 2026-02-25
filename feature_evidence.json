@@ -1,0 +1,120 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-a-home-screen-as-the-default-landing-view-it-must-display-the-app-logo-generated-icon-the-title-my-reminder-in-large-bold-typography-a-short-tagline-and-a-prominent-set-destination-button-styled-with-a-golden-yellow-fill-on-a-dark-background-the-screen-should-use-a-dark-cinematic-black-background-0a0a0a-111111-with-yellow-golden-accent-color-f5c518-or-similar-use-rounded-cards-and-material-design-inspired-layout-suitable-for-mobile-viewports",
+      "featureTitle": "Implement a Home Screen as the default landing view. It must display the app logo (generated icon), the title 'MY REMINDER' in large bold typography, a short tagline, and a prominent 'Set Destination' button styled with a golden/yellow fill on a dark background. The screen should use a dark cinematic black background (#0A0A0A / #111111) with yellow/golden accent color (#F5C518 or similar). Use rounded cards and Material Design–inspired layout suitable for mobile viewports.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HomeScreen.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-destination-input-screen-accessible-from-the-home-screen-it-must-include-1-a-styled-search-bar-with-a-location-pin-icon-and-placeholder-text-search-destination-2-a-map-preview-area-rendered-as-a-static-visual-placeholder-card-no-real-gps-map-api-showing-a-stylized-dark-map-tile-with-a-golden-marker-pin-and-3-a-next-or-set-alert-button-at-the-bottom-to-proceed-to-the-alert-settings-screen-maintain-dark-background-and-golden-accent-styling-consistent-with-the-home-screen",
+      "featureTitle": "Implement a Destination Input Screen accessible from the Home Screen. It must include: (1) a styled search bar with a location pin icon and placeholder text 'Search destination…', (2) a map preview area rendered as a static visual placeholder card (no real GPS/map API) showing a stylized dark map tile with a golden marker pin, and (3) a 'Next' or 'Set Alert' button at the bottom to proceed to the Alert Settings screen. Maintain dark background and golden accent styling consistent with the Home Screen.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/DestinationInputScreen.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-an-alert-settings-screen-accessible-from-the-destination-input-screen-it-must-include-1-a-section-titled-remind-me-before-arrival-with-three-selectable-option-chips-buttons-for-1-min-2-min-and-5-min-only-one-can-be-active-at-a-time-highlighted-in-golden-yellow-when-selected-2-a-sound-toggle-switch-labeled-sound-alert-styled-with-a-golden-active-state-3-a-save-reminder-button-as-the-primary-cta-at-the-bottom-and-4-a-back-navigation-option-all-state-selected-time-option-sound-toggle-is-managed-locally-in-react-state",
+      "featureTitle": "Implement an Alert Settings Screen accessible from the Destination Input Screen. It must include: (1) a section titled 'Remind Me Before Arrival' with three selectable option chips/buttons for '1 min', '2 min', and '5 min' — only one can be active at a time, highlighted in golden yellow when selected; (2) a sound toggle switch labeled 'Sound Alert' styled with a golden active state; (3) a 'Save Reminder' button as the primary CTA at the bottom; and (4) a back navigation option. All state (selected time option, sound toggle) is managed locally in React state.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/AlertSettingsScreen.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-multi-screen-navigation-system-using-react-state-or-a-simple-router-connecting-the-three-screens-home-destination-input-alert-settings-on-save-home-include-a-top-navigation-bar-on-the-destination-input-and-alert-settings-screens-with-a-back-arrow-icon-and-the-current-screen-title-in-golden-text",
+      "featureTitle": "Implement a multi-screen navigation system (using React state or a simple router) connecting the three screens: Home → Destination Input → Alert Settings → (on save) Home. Include a top navigation bar on the Destination Input and Alert Settings screens with a back arrow icon and the current screen title in golden text.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/TopNavBar.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-dark-cinematic-design-system-across-all-screens-background-color-0a0a0a-or-111111-primary-accent-color-golden-yellow-f5c518-or-ffd700-all-interactive-cards-and-containers-use-rounded-corners-border-radius-16px-typography-is-modern-sans-serif-e-g-inter-or-system-ui-with-varying-weights-minimal-iconography-using-outline-style-icons-and-the-overall-aesthetic-targets-young-adult-users-with-a-professional-and-intuitive-feel-inspired-by-android-material-design-3",
+      "featureTitle": "Apply a consistent dark cinematic design system across all screens: background color #0A0A0A or #111111, primary accent color golden yellow (#F5C518 or #FFD700), all interactive cards and containers use rounded corners (border-radius ~16px), typography is modern sans-serif (e.g., Inter or system-ui) with varying weights, minimal iconography using outline-style icons, and the overall aesthetic targets young adult users with a professional and intuitive feel inspired by Android Material Design 3.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-the-app-in-a-mobile-frame-wrapper-max-width-390px-centered-on-desktop-to-simulate-a-smartphone-display-with-a-subtle-dark-outer-frame-or-shadow-to-reinforce-the-mobile-app-aesthetic",
+      "featureTitle": "Render the app in a mobile-frame wrapper (max-width ~390px, centered on desktop) to simulate a smartphone display, with a subtle dark outer frame or shadow to reinforce the mobile app aesthetic.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
